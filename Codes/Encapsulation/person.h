@@ -1,14 +1,13 @@
 #include <string>
 
-class Person
-{
+class Person {
 private:
-    std::__cxx11::string name;
+    std::string name;
     unsigned long int cpf;
     unsigned int cep;
 public:
     Person();
-    Person(std::__cxx11::string user_name, unsigned int cep = 0, unsigned int cpf = 0);
+    Person(std::string user_name, unsigned int cep = 0, unsigned int cpf = 0);
     ~Person();
 
     void setName(std::string user_name);

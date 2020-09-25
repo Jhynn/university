@@ -1,6 +1,7 @@
 #include "decToRoman.hpp"
 
-int main(int argc, char const *argv[]) {
+int
+main(int argc, char const *argv[]) {
     DecimalToRoman dtr;
     dtr.show2();
 

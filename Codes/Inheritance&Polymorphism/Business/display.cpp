@@ -1,7 +1,8 @@
 #include "company.h"
 #include "employee.h"
 
-int main(int argc, char const *argv[]) {
+int
+main(int argc, char const *argv[]) {
     Employee alinne("Alinne", "Surgery Center", 2048); // Centro cirúrgico.
     alinne.advanceTime(402);                           // 1 ano, 1 mês e 7 dias.
     alinne.setSalary(8192);

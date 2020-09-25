@@ -13,8 +13,7 @@ struct cell {
 
 typedef struct cell Cell;
 
-class HashTable
-{
+class HashTable {
 private:
     Cell** vector;
     int    quantity;

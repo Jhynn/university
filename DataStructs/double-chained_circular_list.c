@@ -15,16 +15,19 @@ struct circular_list {
 };
 
 
-void initialize(struct circular_list *list) {
+void 
+initialize(struct circular_list *list) {
     list->start = NULL;
     list->counter = 0;
 }
 
-int is_empty(struct circular_list *list) {
+int 
+is_empty(struct circular_list *list) {
     return list->start == NULL;
 }
 
-void add(struct circular_list *list, int element) {
+void 
+add(struct circular_list *list, int element) {
     struct cell *new = (struct cell*) malloc(sizeof(struct cell));
     new->key = element;
     if (list->start == NULL) {
@@ -46,7 +49,8 @@ void add(struct circular_list *list, int element) {
     }
 }
 
-int to_remove(struct circular_list *list, int element) {
+int 
+to_remove(struct circular_list *list, int element) {
     struct cell *aux = (struct cell*) malloc(sizeof(struct cell));
     aux = list->start;
     if (aux == NULL) {
@@ -65,7 +69,8 @@ int to_remove(struct circular_list *list, int element) {
     return 0;
 }
 
-void find_out(struct circular_list *list, unsigned int key) {
+void 
+find_out(struct circular_list *list, unsigned int key) {
     if (list->start == NULL) {
         printf("Lista vazia!");
     } else {
@@ -87,7 +92,8 @@ void find_out(struct circular_list *list, unsigned int key) {
     }
 }
 
-void to_show(struct circular_list *list) {
+void 
+to_show(struct circular_list *list) {
     struct cell *aux = list->start;
     do {
         printf("%d\n", aux->key);
@@ -95,7 +101,8 @@ void to_show(struct circular_list *list) {
     } while (aux != list->start);
 }
 
-int josephus_problem(struct circular_list *list, int element, unsigned int number) {
+int 
+josephus_problem(struct circular_list *list, int element, unsigned int number) {
     struct cell *aux = (struct cell*) malloc(sizeof(struct cell));
     unsigned int k = 0;
     if (aux == NULL) {
@@ -120,7 +127,8 @@ int josephus_problem(struct circular_list *list, int element, unsigned int numbe
     return 0;
 }
 
-int main(int argc, char const *argv[]) {
+int 
+main(int argc, char const *argv[]) {
     struct circular_list lista;
 
     initialize(&lista);

@@ -1,8 +1,7 @@
 #include "employee.h"
 #include <stdio.h>
 
-Employee::Employee()
-{
+Employee::Employee() {
     name = "";
     time = 0;
 
@@ -10,8 +9,7 @@ Employee::Employee()
     department = "";
 }
 
-Employee::Employee(std::string name, std::string department, float salary)
-{
+Employee::Employee(std::string name, std::string department, float salary) {
     this->name = name;
     this->time = 0;
 
@@ -19,31 +17,38 @@ Employee::Employee(std::string name, std::string department, float salary)
     this->department = department;
 }
 
-void Employee::setName(std::string userName) {
+void
+Employee::setName(std::string userName) {
     name = userName;
 }
 
-void Employee::setSalary(float salary) {
+void
+Employee::setSalary(float salary) {
     this->salary = salary;
 }
 
-void Employee::setDepartment(std::string department) {
+void
+Employee::setDepartment(std::string department) {
     this->department = department;
 }
 
-std::string Employee::getName() {
+std::string
+Employee::getName() {
     return name;
 }
 
-std::string Employee::getDepartment() {
+std::string
+Employee::getDepartment() {
     return department;
 }
 
-float Employee::getSalary() {
+float
+Employee::getSalary() {
     return salary;
 }
 
-void Employee::getTime() {
+void
+Employee::getTime() {
     printf("You've been with us for about.\n");
     printf(" Years: %u\n", time / 365);
     printf("Months: %u\n", time % 365 / 30);
@@ -51,11 +56,13 @@ void Employee::getTime() {
     printf("Thank you!\n");
 }
 
-void Employee::advanceTime(unsigned int time) {
+void
+Employee::advanceTime(unsigned int time) {
     this->time += time;
 }
 
-void Employee::show() {
+void
+Employee::show() {
     printf("Name: %s.\n\tDepartment: %s.\n\tSalary: R$%.2f\n", 
             name.c_str(), department.c_str(), salary);
     getTime(); // this->getTime();

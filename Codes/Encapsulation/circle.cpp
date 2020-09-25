@@ -12,10 +12,12 @@ Circle::~Circle() {
 
 }
 
-float Circle::circle_area() {
+float 
+Circle::circle_area() {
     return area;
 }
 
-float Circle::circle_circunference() {
+float
+Circle::circle_circunference() {
     return circunference;
 }

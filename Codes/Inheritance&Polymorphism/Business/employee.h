@@ -3,8 +3,7 @@
 
 #include <string>
 
-class Employee
-{
+class Employee {
 private:
     std::string  name;
     std::string  department;

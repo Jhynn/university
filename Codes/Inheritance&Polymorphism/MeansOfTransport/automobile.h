@@ -3,8 +3,7 @@
 
 #include "vehicle.h"
 
-class Automobile : public Vehicle
-{
+class Automobile : public Vehicle {
 private:
     float enginePower;
 

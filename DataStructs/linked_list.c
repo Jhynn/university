@@ -12,16 +12,19 @@ struct linked_list {
     struct cell *first, *last;
 };
 
-void initialize(struct linked_list* list) {
+void 
+initialize(struct linked_list* list) {
     list->first = list->last = NULL;
     list->counter = 0;
 }
 
-int is_empty(struct linked_list* list) {
+int 
+is_empty(struct linked_list* list) {
     return list->first == NULL;
 }
 
-void add(struct linked_list* list, int element) {
+void 
+add(struct linked_list* list, int element) {
     struct cell *new;
     //new = (struct cell*) malloc(sizeof(struct cell));
     new->value = element;
@@ -37,7 +40,8 @@ void add(struct linked_list* list, int element) {
     list->counter++; // list->++counter = list->last;
 }
 
-void remove(struct linked_list* list, int element) {
+void 
+remove(struct linked_list* list, int element) {
     if (is_empty(list)) {
         printf("Lista vazia!");
         return;
@@ -60,14 +64,16 @@ void remove(struct linked_list* list, int element) {
     }
 }
 
-void to_show(struct linked_list *list) {
+void 
+to_show(struct linked_list *list) {
     while(list->first->value != NULL){
         printf("Valor: %d.", list->first->value);
         list->first->next;
     }
 }
 
-int main(int argc, char const *argv[]) {
+int 
+main(int argc, char const *argv[]) {
     struct linked_list list;
     initialize(&list);
 

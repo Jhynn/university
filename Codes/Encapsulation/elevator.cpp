@@ -12,15 +12,18 @@ Elevator::~Elevator() {
 
 }
 
-unsigned int Elevator::getCurrentFloor() {
+unsigned int
+Elevator::getCurrentFloor() {
     return current_floor;
 }
 
-unsigned int Elevator::getPresentPeople() {
+unsigned int
+Elevator::getPresentPeople() {
     return present_people;
 }
 
-void Elevator::goUp(unsigned int up_to) {
+void
+Elevator::goUp(unsigned int up_to) {
     if (current_floor != total_floors && up_to == 0) {
         current_floor++;
         return;
@@ -31,7 +34,8 @@ void Elevator::goUp(unsigned int up_to) {
         current_floor = aux;
 }
 
-void Elevator::enterTheElevator(unsigned int people) {
+void
+Elevator::enterTheElevator(unsigned int people) {
     if (present_people != lift_capacity && people == 0) {
         present_people++;
         return;
@@ -41,7 +45,8 @@ void Elevator::enterTheElevator(unsigned int people) {
         present_people = aux;
 }
 
-void Elevator::skirt(unsigned int minus_people) {
+void
+Elevator::skirt(unsigned int minus_people) {
     if (present_people > 0 && minus_people == 0) {
         present_people--;
         return;
@@ -51,7 +56,8 @@ void Elevator::skirt(unsigned int minus_people) {
         present_people = aux;
 }
 
-void Elevator::goDown(unsigned int down_to) {
+void
+Elevator::goDown(unsigned int down_to) {
     if (current_floor != 0 && down_to == 0) {
         current_floor--;
         return;
@@ -61,7 +67,8 @@ void Elevator::goDown(unsigned int down_to) {
         current_floor = aux;
 }
 
-void Elevator::show() {
+void
+Elevator::show() {
     std::cout << "Pessoas presentes: " << present_people << std::endl << \
     "Andar atual: " << current_floor << std::endl << "Último andar: " << total_floors << \
     std::endl << "Capacidade do Elevador: " << lift_capacity << \

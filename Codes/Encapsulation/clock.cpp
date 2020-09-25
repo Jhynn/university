@@ -13,22 +13,22 @@ Clock::~Clock() {
 
 }
 
-void Clock::setTime(unsigned int timeInSeconds) {
+void
+Clock::setTime(unsigned int timeInSeconds) {
     proceede(timeInSeconds);
 }
 
-void Clock::proceede(int advance_seconds) {
+void
+Clock::proceede(int advance_seconds) {
     seconds = advance_seconds;
 
-    if (seconds > 59)
-    {
+    if (seconds > 59) {
         seconds  = advance_seconds % 3600 % 60;
         minutes += advance_seconds % 3600 / 60;
         hours   += advance_seconds / 3600;
     }
 
-    if (minutes > 59)
-    {
+    if (minutes > 59) {
         hours  += minutes / 60;
         minutes = advance_seconds % 3600 / 60;
     }
@@ -37,14 +37,17 @@ void Clock::proceede(int advance_seconds) {
         hours = advance_seconds / 3600 / 60;
 }
 
-void Clock::show() {
+void
+Clock::show() {
     printf("%02dh%02dm%02ds\n", hours, minutes, seconds);
 }
 
-void Clock::operator+(int sec) {
+void
+Clock::operator+(int sec) {
     proceede(sec);
 }
 
-void Clock::operator-(int sec) {
+void
+Clock::operator-(int sec) {
     proceede(sec * -1);
 }

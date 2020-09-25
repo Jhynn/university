@@ -13,16 +13,19 @@ struct binary_search_tree {
     unsigned int counter;
 };
 
-void initialize(struct binary_search_tree *list) {
+void
+initialize(struct binary_search_tree *list) {
     list->root = NULL;
     list->counter = 0;
 }
 
-int is_empty(struct binary_search_tree *list) {
+int
+is_empty(struct binary_search_tree *list) {
     return list->root == NULL;
 }
 
-void insert(struct binary_search_tree *list, int element) {
+void
+insert(struct binary_search_tree *list, int element) {
     if (list->root == NULL) {
         list->counter++;
         list->root->key = list->counter;
@@ -43,7 +46,8 @@ void insert(struct binary_search_tree *list, int element) {
             if (artificie->value == element) {
                 printf("Elemento já salvo.");
                 return;
-            } else if (artificie->value < element) { // Elemento maior que o valor atual!
+            } else if (artificie->value < element) { 
+                // Elemento maior que o valor atual!
                 if (artificie->right == NULL) {     // Vai para à direita.
                     artificie->right = new_cell;
                     list->counter++;
@@ -66,7 +70,8 @@ void insert(struct binary_search_tree *list, int element) {
     }
 }
 
-int find_out(struct binary_search_tree *list, int element) {
+int
+find_out(struct binary_search_tree *list, int element) {
     if (is_empty(list)) {
         printf("Lista vazia!");
         return -1;
@@ -75,15 +80,18 @@ int find_out(struct binary_search_tree *list, int element) {
             return list->root->key;
         } else {
             if (element < list->root->value) {
-                return find_out((struct binary_search_tree*) list->root->left, element);
+                return find_out((struct binary_search_tree*) \
+                    list->root->left, element);
             } else {
-                return find_out((struct binary_search_tree*) list->root->right, element);
+                return find_out((struct binary_search_tree*) \
+                    list->root->right, element);
             }
         }
     }
 }
 
-struct cell* find_out_cell(struct binary_search_tree *list, int element) {
+struct cell*
+find_out_cell(struct binary_search_tree *list, int element) {
     if (is_empty(list)) {
         printf("Lista vazia!");
         return NULL;
@@ -92,15 +100,18 @@ struct cell* find_out_cell(struct binary_search_tree *list, int element) {
             return list->root;
         } else {
             if (element < list->root->value) {
-                return find_out_cell((struct binary_search_tree*) list->root->left, element);
+                return find_out_cell((struct binary_search_tree*)\      
+                    list->root->left, element);
             } else {
-                return find_out_cell((struct binary_search_tree*) list->root->right, element);
+                return find_out_cell((struct binary_search_tree*)\
+                    list->root->right, element);
             }
         }
     }
 }
 
-void conclude(struct binary_search_tree *list) {
+void
+conclude(struct binary_search_tree *list) {
     if (!is_empty(list)) {
         conclude((struct binary_search_tree*) list->root->left);
         conclude((struct binary_search_tree*) list->root->right);
@@ -110,7 +121,8 @@ void conclude(struct binary_search_tree *list) {
     }   
 }
 
-void remove_element(struct binary_search_tree *list, int element) {
+void
+remove_element(struct binary_search_tree *list, int element) {
     if (is_empty(list)) {
         printf("Lista Vazia!");
     } else {
@@ -121,9 +133,11 @@ void remove_element(struct binary_search_tree *list, int element) {
             struct cell* auxiliary = (struct cell*) malloc(sizeof(struct cell));
             auxiliary = list->root;
             if (element < auxiliary->value) {
-                find_out_cell((struct binary_search_tree*) auxiliary->left, element);
+                find_out_cell((struct binary_search_tree*) auxiliary->left, \
+                    element);
             } else if (element > auxiliary->value) {
-                find_out_cell((struct binary_search_tree*) auxiliary->right, element);
+                find_out_cell((struct binary_search_tree*) \
+                    auxiliary->right, element);
             } else {
                 conclude((struct binary_search_tree*) auxiliary);
                 list->counter--;
@@ -132,7 +146,8 @@ void remove_element(struct binary_search_tree *list, int element) {
     }
 }
 
-void to_show(struct binary_search_tree *list) {
+void
+to_show(struct binary_search_tree *list) {
     if (is_empty(list)) {
         printf("Lista vazia!");
         return;
@@ -151,7 +166,9 @@ void to_show_a_cell(struct binary_search_tree* tree, int key) {
     printf("Informações do Elemento:\n\tChave: %d \tValor: %d", aux->key, aux->value);
 }
 */
-int main(int argc, char const *argv[]) {
+
+int 
+main(int argc, char const *argv[]) {
     struct binary_search_tree test_list;
     initialize(&test_list);
     insert(&test_list, 7);
@@ -172,9 +189,8 @@ int main(int argc, char const *argv[]) {
     to_show(&test_list);
     conclude(&test_list);
 
-    if(is_empty(&test_list)) {
+    if(is_empty(&test_list))
         printf("A árvore está vazia!");
-    }
 
     return 0;
 }

@@ -3,33 +3,35 @@
 
 unsigned int Company::id = 1;
 
-Company::Company()
-{
+Company::Company() {
     name = "";
     this->id++;
     employees[0] = NULL;
 }
 
-Company::Company(std::string companyName)
-{
+Company::Company(std::string companyName) {
     this->id++;
     this->name = companyName;
     employees[0] = NULL;
 }
 
-void Company::setName(std::string newName) {
+void
+Company::setName(std::string newName) {
     name = newName;
 }
 
-std::string Company::getName() const {
+std::string
+Company::getName() const {
     return name;
 }
 
-unsigned int Company::getId() const {
+unsigned int
+Company::getId() const {
     return id;
 }
 
-void Company::toHire(Employee &employee) {
+void
+Company::toHire(Employee &employee) {
     employeesQuantity++;
 
     for (int i = 0; i < employeesQuantity; i++) {
@@ -41,7 +43,8 @@ void Company::toHire(Employee &employee) {
     }
 }
 
-void Company::toDismiss(std::string employeeName) {
+void
+Company::toDismiss(std::string employeeName) {
     int i = 0;
     while (i++ != employeesQuantity) {
         if (employees[i]->getName().c_str() == employeeName.c_str()) {
@@ -52,7 +55,8 @@ void Company::toDismiss(std::string employeeName) {
     }
 }
 
-void Company::toSubsidize(std::string department, float percents) {
+void
+Company::toSubsidize(std::string department, float percents) {
     if (percents > 1)
         percents /= 100;
     else if (percents < 0) // Realmente deve existir?
@@ -66,7 +70,8 @@ void Company::toSubsidize(std::string department, float percents) {
     }
 }
 
-void Company::show() {
+void
+Company::show() {
     for (int i = 0; i < employeesQuantity; i++) {
         printf("%s.\n", employees[i]->getName().c_str());
         printf("\t%s.\n", employees[i]->getDepartment().c_str());
@@ -74,7 +79,8 @@ void Company::show() {
     }
 }
 
-void Company::info() {
+void
+Company::info() {
     if (name == "")
         name = "Desconhecido";
 

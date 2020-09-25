@@ -3,8 +3,7 @@
 
 #include "vehicle.h"
 
-class Car : public Vehicle
-{
+class Car : public Vehicle {
 private:
     unsigned int numberOfDoors;
 public:

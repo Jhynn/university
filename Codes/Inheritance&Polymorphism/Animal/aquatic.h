@@ -3,8 +3,7 @@
 
 #include "animal.h"
 
-class Aquatic : public Animal
-{
+class Aquatic : public Animal {
 public:
     inline
     Aquatic() {

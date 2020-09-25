@@ -1,9 +1,11 @@
 #include "friends.hpp"
 
-int main() { 
+int
+main() { 
 	A a; 
 	B b; 
-	b.showA(a); 
+	b.showA(a);
+
 	return 0; 
 } 
 

@@ -1,5 +1,4 @@
-class Circle
-{
+class Circle {
 private:
     float area;
     float radius;
@@ -9,6 +8,9 @@ public:
     Circle(float circle_radius);
     ~Circle();
 
-    float circle_area();
-    float circle_circunference();
+    float
+    circle_area();
+
+    float
+    circle_circunference();
 };

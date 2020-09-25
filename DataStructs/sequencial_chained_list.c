@@ -12,23 +12,28 @@ typedef struct sequencial_chained_list {
 } chained_list;
 
 
-void initialize(chained_list *list) {
+void 
+initialize(chained_list *list) {
     list->length = 0; // A lista inicia com tamanho 0.
 }
 
-int isEmpty(const chained_list *list) {
+int 
+isEmpty(const chained_list *list) {
     return list->length == 0; // Se o tamanho da lista for igual a 0.
 }
 
-int isFull(const chained_list *list) {
+int 
+isFull(const chained_list *list) {
     return list->length >= size; // Se o tamanho da lista for maior ou igual a size.
 }
 
-void clean_list(chained_list *list) {
+void 
+clean_list(chained_list *list) {
     list->length = 0;
 }
 
-int insert(chained_list *list, unsigned int index, int value) {
+int 
+insert(chained_list *list, unsigned int index, int value) {
     if (isFull(list) || index >= size || index < 0) return 0;
 
     list->list[index].value = value;
@@ -37,7 +42,8 @@ int insert(chained_list *list, unsigned int index, int value) {
     return 1;
 }
 
-int sorted_insert(chained_list *list, int value) {
+int 
+sorted_insert(chained_list *list, int value) {
     int position = 0;
 
     while (position < list->length && value > list->list[position].value)
@@ -46,7 +52,8 @@ int sorted_insert(chained_list *list, int value) {
     return insert(list, position, value);
 }
 
-int find_out(chained_list *list, int value) {
+int 
+find_out(chained_list *list, int value) {
     for (unsigned int i = 0; i < list->length; i++) {
         if (list->list[i].value == value) {
             return i;
@@ -56,7 +63,8 @@ int find_out(chained_list *list, int value) {
     return -256;
 }
 
-int binary_search(chained_list *list, int value) {
+int 
+binary_search(chained_list *list, int value) {
     int above, middle, below;
     if (!isEmpty(list)); {
         below = 0, above = list->length -1;
@@ -74,7 +82,8 @@ int binary_search(chained_list *list, int value) {
     return list->list[list->length-1].value; // Ultimo elemento.
 }
 
-void remove_element(chained_list *list, unsigned int index) {
+void 
+remove_element(chained_list *list, unsigned int index) {
     /*
     for (int i = 0; i < size; i++) {
         if (list->list->key == index) {
@@ -84,13 +93,15 @@ void remove_element(chained_list *list, unsigned int index) {
     */
 }
 
-void to_show(chained_list *list) {
+void 
+to_show(chained_list *list) {
     for (int i = 0; i < list->length; i++) {
         printf("%d\n", list->list[i].value);
     }
 }
 
-int main(int argc, char const *argv[]) {
+int 
+main(int argc, char const *argv[]) {
     chained_list chain_lis;
     initialize(&chain_lis);
     insert(&chain_lis, 0, 4);

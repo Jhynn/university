@@ -4,8 +4,7 @@
 #include <string>
 #include <iostream>
 
-class Contact
-{
+class Contact {
 private:
     std::string name;
     std::string numberPhone;

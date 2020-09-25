@@ -3,7 +3,8 @@
 
 #include "clock.h"
 
-int main(int argc, char const *argv[]) {
+int
+main(int argc, char const *argv[]) {
     Clock *clocks = new Clock[2];
     clocks[0].setTime(3600); // 1h
     clocks[0] + 60;          // 1m

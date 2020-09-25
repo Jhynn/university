@@ -3,8 +3,7 @@
 
 #include "terrestrial.h"
 
-class Cat : public Terrestrial
-{
+class Cat : public Terrestrial {
 public:
     inline
     Cat() {

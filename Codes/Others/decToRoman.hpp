@@ -1,7 +1,6 @@
 #include <iostream>
 
-class DecimalToRoman
-{
+class DecimalToRoman {
 private:
     int  number;
     char dictionary[8];
@@ -17,11 +16,13 @@ public:
         dictionary[6] = 'M'; // 1.000,
     }
 
-    void setNumber(int number) {
+    void
+    setNumber(int number) {
         this->number = number;
     }
 
-    void show() {
+    void
+    show() {
         int aux, j;
         std::cout << number << " = ";
         do {
@@ -88,7 +89,8 @@ public:
         number = this->number;
     }
 
-    void show2() {
+    void
+    show2() {
         int k, j = number;
         std::cout << j << " = ";
         do {

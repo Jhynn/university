@@ -5,8 +5,7 @@
 #include "employee.h"
 #include <list>
 
-class Company
-{
+class Company {
 private:
     static unsigned int id;
 

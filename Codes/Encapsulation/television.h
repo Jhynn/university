@@ -1,5 +1,4 @@
-class Television
-{
+class Television {
 private:
     unsigned int channel;
     unsigned int sound_intensity;

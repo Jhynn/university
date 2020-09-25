@@ -5,11 +5,10 @@
 
 #include <cmath>
 
-class PolarCoordinates // Position Vector.
-{
+class PolarCoordinates {    // Position Vector.
 private:
-    double radial; // Radial Coordinate.
-    double polar;  // Polar Coordinate.
+    double radial;          // Radial Coordinate.
+    double polar;           // Polar Coordinate.
 
 private:
     void 

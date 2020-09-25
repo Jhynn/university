@@ -3,8 +3,7 @@
 
 #include <string>
 
-class Animal
-{
+class Animal {
 protected:
     std::string name;
     std::string environment;

@@ -14,13 +14,15 @@ typedef struct circular_chained_list { // Lista encadeada circular.
     struct cell *first, *last;
 } circular_list;
 
-void initialize(struct circular_chained_list *list) {
+void 
+initialize(struct circular_chained_list *list) {
     list->first = NULL;
     list->last = NULL;
     list->counter = 0;
 }
 
-void add(struct circular_chained_list *list, unsigned int key) {
+void 
+add(struct circular_chained_list *list, unsigned int key) {
     struct cell *new;
     new->id = key; new->next = NULL;
 
@@ -51,7 +53,8 @@ void add(struct circular_chained_list *list, unsigned int key) {
     // list->counter++; // Conta os itens adicionados.
 }
 
-void remove_element(struct circular_chained_list *list, unsigned int key) {
+void 
+remove_element(struct circular_chained_list *list, unsigned int key) {
     if (list->first == NULL) {
         printf("Lista vazia!");
         return;
@@ -66,20 +69,23 @@ void remove_element(struct circular_chained_list *list, unsigned int key) {
     }
     */
     struct cell *current, *predecessor; // Atual e seu antecessor.
-    current = list->first; predecessor = list->first; // Ambos são o primeiro elemento.
+    current = list->first; predecessor = list->first; 
+    // Ambos são o primeiro elemento.
 
     do {
         if (current->id == key) {
             if (current == list->first) { // Se a key for o primeiro elemento.
                 list->first = current->next; // O primeiro recebe o segundo.
-                list->last->next = current->next; // O último aponta para o segundo (primeiro).
+                list->last->next = current->next; 
+                // O último aponta para o segundo (primeiro).
                 free(current); // Desaloca o (antigo) primeiro.
                 // list->counter--; // Decrementa no total de elementos.
                 return;
             } else {
                 predecessor->next = current->next;
                 if (current == list->last) { // Se a key for o último elemento.
-                    list->last = predecessor; // Último recebe o anterior ao atual.
+                    list->last = predecessor; 
+                    // Último recebe o anterior ao atual.
                 }
                 free(current); // Desaloca o atual.
                 // list->counter--; // Decrementa no total de elementos.
@@ -137,7 +143,8 @@ void to_show(struct circular_chained_list *list) { // Imprime a lista.
     } while (aux != list->first);
 }
 
-int main(int argc, char const *argv[]) {
+int
+main(int argc, char const *argv[]) {
     circular_list list_test;
     initialize(&list_test);
 

@@ -3,8 +3,7 @@
 
 #include <string>
 
-class Vehicle
-{
+class Vehicle {
 private:
     std::string  brand;
     std::string  model;

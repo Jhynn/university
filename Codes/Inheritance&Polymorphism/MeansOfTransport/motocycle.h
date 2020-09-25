@@ -3,8 +3,7 @@
 
 #include "vehicle.h"
 
-class Motocycle : public Vehicle
-{
+class Motocycle : public Vehicle {
 private:
     bool electricTrigger;
 

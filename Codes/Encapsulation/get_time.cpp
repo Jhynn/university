@@ -3,15 +3,14 @@ using namespace std;
 
 // A sample function whose time taken to
 // be measured
-void fun()
-{
-    for (int i=0; i<10; i++) 
-    { 
+void
+fun() {
+    for (int i=0; i<10; i++) { 
     } 
 }
  
-int main()
-{
+int
+main() {
     /* clock_t clock(void) returns the number of clock ticks
        elapsed since the program was launched.To get the number
        of seconds used by the CPU, you will need to divide by

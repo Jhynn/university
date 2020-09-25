@@ -3,8 +3,7 @@
 
 #include "vehicle.h"
 
-class Bike : public Vehicle 
-{
+class Bike : public Vehicle {
 private:
     bool         luggageRack;  // Bagageiro.
     unsigned int gaitQuantity; // Quantidade de marchas.

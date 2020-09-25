@@ -6,8 +6,7 @@
 #include "car.h"
 #include <string>
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     Car test;
     test.setModel("CLA-250");
     test.setSpeed(20);

@@ -3,8 +3,7 @@
 
 typedef std::string String;
 
-class Product
-{
+class Product {
 private:
     String name;
     double price;
@@ -22,31 +21,38 @@ public:
         this->quantity = quantity;
     }
 
-    void setName(String name) {
+    void
+    setName(String name) {
         this->name = name;
     }
 
-    void setPrice(double price) {
+    void
+    setPrice(double price) {
         this->price = price;
     }
 
-    void setQuantity(int quantity) {
+    void
+    setQuantity(int quantity) {
         this->quantity = quantity;
     }
 
-    String getName() {
+    String
+    getName() {
         return name;
     }
 
-    double getPrice() {
+    double
+    getPrice() {
         return price;
     }
 
-    int getQuantity() {
+    int
+    getQuantity() {
         return quantity;
     }
 
-    double toPay() {
+    double
+    toPay() {
         if (0 < quantity && quantity < 10)
             return price * quantity;
         else if (11 < quantity && quantity < 21)
@@ -57,7 +63,8 @@ public:
             return price * quantity / 25 / 100;
     }
 
-    void show() {
+    void
+    show() {
         std::cout << "Nome........: " <<   name   << std::endl;
         std::cout << "Preço.......: " <<   price  << std::endl;
         std::cout << "Quantity....: " << quantity << std::endl;

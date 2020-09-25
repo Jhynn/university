@@ -3,8 +3,7 @@
 
 #include "terrestrial.h"
 
-class Ox : public Terrestrial
-{
+class Ox : public Terrestrial {
 public:
     Ox() {
     }
