@@ -1,0 +1,16 @@
+Lembre que, para compilar o código, você deve seguir esses passos.
+(1º) No diretório (pasta) em que estão os códigos, (2º) abra o terminal,
+então digite, para compilar:
+    (3º) gcc nome_do_arquivo.c -o nome_do_arquivo_compilado
+e para executar:
+    (4º) ./nome_do_arquivo_compilado
+Sim, o arquivo compilado é executável (tem permissão de execução).
+
+O que é muito legal é que o bash permite escrever mais de uma
+instrução na mesma linha, usando &&, dessa forma:
+
+gcc nome_do_arquivo.c -o nome_do_arquivo_compilado && ./nome_do_arquivo_compilado
+
+Se você tiver alguma dúvida, me avisa, eu vou tentar te ajudar.
+
+Não esqueça que: a tecla tab autocompleta a palavra. Seja preguiçosa (inteligente) e use-a.

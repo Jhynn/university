@@ -1,0 +1,13 @@
+Vectors:
+    Implemente uma função para transpor uma matriz.
+Strings:
+    Implemente uma função para concatenar a string origem
+    à string destino.
+Pointers:
+    Relacione variáveis.
+Structs:
+    Implemente uma função para ler uma estrutura.
+    Por exemplo: Pessoa, Livro...
+Files:
+    Desenvolva um algoritimo para gravar o valor de números inteiros
+    em um arquivo.
