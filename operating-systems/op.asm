@@ -139,3 +139,4 @@ section .text
         pop rcx
         add rsp, rcx
         ret
+; Todo o código foi feito com o auxílio e discussão de Lucas Araújo ─ @LvMalware
